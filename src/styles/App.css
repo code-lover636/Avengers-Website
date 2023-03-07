@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&family=Jost:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Jost;
+  color: #FFFFFF;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #181922;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+body .home-sec {
+  flex: 1;
+}
+body a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.right-bar {
+  width: 150px;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-bar ul {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0em;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.right-bar ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.right-bar ul li p {
+  text-align: center;
+  padding: 1em 0em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-bar ul li p:hover {
+  background-color: green;
+}
+
+.sidebar {
+  width: 110px;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar .logo {
+  width: 100px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+.sidebar .scroll-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 220px;
+  width: 100%;
+}
+.sidebar .scroll-wrap .up, .sidebar .scroll-wrap .down {
+  display: grid;
+  place-content: center;
+  background: radial-gradient(100% 400% at 100% 100%, #2D0B87 0%, rgba(0, 0, 0, 0.69) 100%);
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+.sidebar .scroll-wrap small {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  transform: rotate(90deg);
+}
+
+.home-sec {
+  background-image: url("../../public/assets/avengers.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  scroll-snap-align: start;
+}
+
+.character-sec {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3cff00;
+  scroll-snap-align: start;
+  position: relative;
+}
+.character-sec .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: calc(100vw - 260px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateX(110px);
+  z-index: 5;
+  filter: blur(3px);
+}
+.character-sec .mask {
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: blur(8px);
+}
+.character-sec .container {
+  z-index: 7;
+  position: relative;
+  height: 100vh;
+  width: calc(100vw - 253px);
+  transform: translateX(110px);
+  display: flex;
+  flex-grow: 1;
+  padding-left: 4em;
+}
+.character-sec .container .character {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  flex-grow: 1;
+  height: 500px;
+  transform: translateX(3em);
+}
+.character-sec .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: calc(50vw - 200px);
+}
+.character-sec .container .content h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.character-sec .container .content h1 span {
+  font-weight: 300;
+}
+.character-sec .container .content .line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.character-sec .container .content .line .col1 {
+  background-color: rgb(0, 255, 0);
+  width: 50%;
+}
+.character-sec .container .content .p1 {
+  margin-top: 1em;
+}/*# sourceMappingURL=App.css.map */
